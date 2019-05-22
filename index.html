@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>2048</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <table>
+        </table>
+
+        <script>
+            let table = document.getElementsByTagName('table')[0];
+            let td, tr, count = 0;
+
+            for (let i = 0; i < 4; i++) {
+                tr = document.createElement('tr');
+                table.appendChild(tr);
+                for(let j = 0; j < 4; j++) {
+                    td = document.createElement('td');
+                    td.id = count + "";
+                    count++;
+                    tr.appendChild(td);
+                }
+            }
+        </script>
+
+        <script src="Case.js"></script>
+        <script src="Grille.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
